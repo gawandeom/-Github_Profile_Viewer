@@ -1,4 +1,4 @@
-// Selecting elements from the DOM
+
 let inp = document.querySelector('input');
 let search = document.querySelector(".btn");
 let main = document.querySelector(".main");
@@ -10,14 +10,14 @@ search.addEventListener("click", () => {
 
 inp.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
-        e.preventDefault(); // Prevent form submission
+        e.preventDefault(); 
         myFunction();
     }
 });
 
 function myFunction() {
     let inpValue = inp.value.trim();
-    if (!inpValue) return; // Do nothing if input is empty
+    if (!inpValue) return; 
 
     let apiUrl = `https://api.github.com/users/${inpValue}`;
 
